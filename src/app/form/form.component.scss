@@ -1,0 +1,116 @@
+
+
+
+.container{
+    width: 350px;
+    height: 600px;
+    background-color: rgb(139, 210, 238,1.5) ;
+    // opacity: ;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+.img{
+  height: 60px;
+  width: 60px;
+  margin: 15px;
+  margin-right: 35px;
+  
+}
+.sabt{
+   color: darkblue;
+   font-size: 25px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+}
+.labell{
+  font-weight:bold;
+  font-size: 13px;
+  margin-left:5px;
+  color: darkblue;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+    align-items: center;
+  }
+  
+  .example-full-width {
+    width: 80%;
+    height: 60px;
+    
+  }
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    font-family: Tanha;
+
+  }
+  .mat-mdc-raised-button.mat-primary{
+    --mdc-protected-button-container-color:#04167c;
+  }
+  .mat-mdc-raised-button:not(:disabled){
+  font-family: Tanha;
+  }
+  
+.mat-mdc-form-field-focus-overlay{
+  bottom: -5px;
+
+}
+.mdc-line-ripple::before, .mdc-line-ripple::after{
+  bottom: -5px;
+}
+.btn{
+  margin-right: 50px;
+  margin-top: 15px;
+}
+.size{
+  width: 33%;
+  
+}
+.margin{
+ margin-left: 7px;
+ margin-right: 7px;
+}
+// .mat-mdc-form-field-focus-overlay{
+//   background-color:rgb(2 13 217 / 87%) ; 
+// }
+.mat-mdc-form-field-focus-overlay {
+  background-color: rgba(2, 13, 217, 0.87);
+}
+
+// .example-container mat-form-field + mat-form-field {
+//   // margin-left: 8px;
+// }
+.mat-mdc-icon-button.mat-mdc-button-base {
+  width: 49px;
+  height: 52px;
+  padding: 0px;
+}
+
+
+.mdc-line-ripple::before, .mdc-line-ripple::after{
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  border-bottom-style: solid;
+  content: "";
+}
+ @font-face{
+font-family: "Tanha";
+src: url(/assets/font/Tanha.woff);
+}
+// @font-face {
+//   font-family: "Tanha";
+//   src: url(./assets/font/Tanha.woff) format("woff");
+// }

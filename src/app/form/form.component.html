@@ -1,0 +1,99 @@
+<div class="container" dir="rtl">
+    <div class="sabt"><p >ثبت نام</p>
+    <img class="img" src="/assets/img/user.png" alt="">
+    </div>
+    
+    <form class="example-form">
+       <label for="" class="labell">نام</label>
+      <mat-form-field class="example-full-width">
+       
+        <mat-label>نام </mat-label>
+        <input matInput placeholder="" >
+        
+      </mat-form-field>
+      <!-- <label for="" class="labell">نام خانوادگی:</label>
+      <mat-form-field class="example-full-width">
+       
+        <mat-label>نام خانوادگی</mat-label>
+        <input matInput placeholder="" >
+        
+      </mat-form-field> -->
+      <label for="" class="labell">نام کاربری</label>
+      <mat-form-field class="example-full-width">
+        <mat-label>نام کاربری</mat-label>
+       
+        <input matInput placeholder="" >
+      </mat-form-field>
+      <label for="" class="labell">جنسیت</label>
+      <mat-form-field class="example-full-width">
+        <mat-label>جنسیت</mat-label>
+        <mat-select>
+          <mat-option value="women">زن</mat-option>
+          <mat-option value="men">مرد</mat-option>
+        </mat-select>
+      </mat-form-field >
+      <label for="" class="labell">کلمه عبور</label>
+      <mat-form-field appearance="fill" width="100%" class="example-full-width">
+        <mat-label>کلمه عبور</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <!-- <label for="" class="labell">تکرار کلمه عبور</label>
+      <mat-form-field appearance="fill" width="100%" class="example-full-width">
+        <mat-label>تکرار کلمه عبور </mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field> -->
+      <label for="" class="labell">تاریخ تولد</label>
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>MM/DD/YYYY</mat-label>
+        <input matInput [matDatepicker]="picker">
+        
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <label for="" class="labell">ایمیل</label>
+      <!-- <div class="example-container  example-full-width"> -->
+        <mat-form-field appearance="fill" class="example-full-width">
+          <mat-label>ایمیل خود را وارد کنید</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      <!-- </div> -->
+      <div class="city">
+      <label for="" class="labell">استان</label>
+      <mat-form-field class="example-full-width size" >
+        <mat-label>استان</mat-label>
+        <mat-select>
+          <mat-option value="women">زن</mat-option>
+          <mat-option value="men">مرد</mat-option>
+        </mat-select>
+      </mat-form-field >
+      <label for="" class="labell margin" >شهرستان</label>
+      <mat-form-field class="example-full-width size">
+        <mat-label>شهرستان</mat-label>
+        <mat-select>
+          <mat-option value="women">زن</mat-option>
+          <mat-option value="men">مرد</mat-option>
+        </mat-select>
+      </mat-form-field >
+    </div>
+      <section>
+        <div class="example-button-row">
+          
+          <button mat-raised-button color="primary" class="btn" >ثبت نام</button>
+          <button mat-raised-button color="primary" class="btn" >انصراف</button>
+          <!-- <button mat-stroked-button color="primary">م</button> -->
+          <!-- <button mat-raised-button disabled>Disabled</button> -->
+          
+        </div>
+      </section>
+      
+      
+    </form>
+  </div>
+  
