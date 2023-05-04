@@ -1,0 +1,121 @@
+<div class="container" dir="rtl">
+  <div class="sabt">
+    <p>ثبت نام</p>
+    <img class="img" src="/assets/img/user.png" alt="" />
+  </div>
+
+  <div class="example-form">
+    <label for="" class="labell">نام</label>
+    <mat-form-field class="example-full-width textfield">
+      <mat-label>نام </mat-label>
+      <input matInput placeholder="" [(ngModel)]="item.name" />
+    </mat-form-field>
+    <!-- <label for="" class="labell">نام خانوادگی:</label>
+      <mat-form-field class="example-full-width textfield ">
+       
+        <mat-label>نام خانوادگی</mat-label>
+        <input matInput placeholder="" >
+        
+      </mat-form-field> -->
+    <label for="" class="labell">نام کاربری</label>
+    <mat-form-field class="example-full-width textfield">
+      <mat-label>نام کاربری</mat-label>
+
+      <input matInput placeholder="" [(ngModel)]="item.username" />
+    </mat-form-field>
+    <label for="" class="labell">جنسیت</label>
+    <!-- <mat-form-field class="example-full-width textfield"> -->
+      <mat-radio-group aria-label="جنسیت" [(ngModel)]="item.gender">
+        <mat-radio-button value="زن">زن</mat-radio-button>
+        <mat-radio-button value="مرد">مرد</mat-radio-button>
+      </mat-radio-group>
+     
+      <!-- <mat-select >
+        <mat-option value="women">زن</mat-option>
+        <mat-option value="men">مرد</mat-option>
+      </mat-select> -->
+    <!-- </mat-form-field> -->
+    <label for="" class="labell">کلمه عبور</label>
+    <mat-form-field
+      appearance="fill"
+      width="100%"
+      class="example-full-width textfield"
+    >
+      <mat-label>کلمه عبور</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        [(ngModel)]="item.password"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <label for="" class="labell">تاریخ تولد</label>
+    <mat-form-field appearance="fill" class="example-full-width textfield">
+      <mat-label>MM/DD/YYYY</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="item.birthday" />
+
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <label for="" class="labell">ایمیل</label>
+    <!-- <div class="example-container  example-full-width textfield "> -->
+    <mat-form-field appearance="fill" class="example-full-width textfield">
+      <mat-label>ایمیل خود را وارد کنید</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        required
+        [(ngModel)]="item.email"
+      />
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <!-- </div> -->
+    <div class="city">
+      <label for="" class="labell">استان</label>
+      <mat-form-field class="example-full-width textfield size">
+        <mat-label>استان</mat-label>
+        <mat-select [(ngModel)]="item.state" (ngModelChange)="onStateChange($event)">
+           <mat-option *ngFor="let st of state"  [value]=" st.id "  >{{st.namestate}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <label for="" class="labell margin">شهرستان</label>
+      <mat-form-field class="example-full-width textfield size">
+        <mat-label>شهرستان</mat-label>
+        <mat-select [(ngModel)]="item.city">
+   
+        
+          <mat-option *ngFor="let ct of selectCity" [value]="ct.namecity" value="ct.namestate">{{ct.namecity}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!-- <section> -->
+    <!-- <div class="example-button-row"> -->
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" class="btn" (click)="cancel()">
+        انصراف
+      </button>
+      <button mat-raised-button color="primary" class="btn" (click)="save()">
+        ثبت نام
+      </button>
+    </div>
+
+    <!-- <button mat-stroked-button color="primary">م</button> -->
+    <!-- <button mat-raised-button disabled>Disabled</button> -->
+
+    <!-- </div> -->
+    <!-- </section> -->
+  </div>
+</div>

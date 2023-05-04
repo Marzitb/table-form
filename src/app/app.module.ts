@@ -12,11 +12,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import{MatSelectModule} from '@angular/material/select';
-import { FormComponent } from './form/form.component';
+import {Formpage} from './form/form.page';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
-
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
 // import { FormControl } from '@angular/forms';
 // matDatepickerToggle
 
@@ -27,12 +27,11 @@ import {MatTableModule} from '@angular/material/table';
   
   declarations: [
     AppComponent,
-    FormComponent
+    Formpage
+    
     
   ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
+ 
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,7 +45,8 @@ import {MatTableModule} from '@angular/material/table';
     MatNativeDateModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatGridListModule,MatTableModule,
+    MatGridListModule,MatTableModule,MatDialogModule,MatRadioModule
+    
     
   ],
  

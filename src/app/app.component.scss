@@ -7,11 +7,21 @@
 table {
     width: 100%;
   }
+  
   .example-button-row {
     display: table-cell;
     max-width: 600px;
+   
   }
   .example-button-row .mat-mdc-button-base {
     margin: 8px 8px 8px 0;
   }
-  
+  .btn{
+     font-family: "Tanha";
+     font-size: "20px";
+     font-weight: bold;
+  }
+  @font-face{
+    font-family: "Tanha";
+    src: url(/assets/font/Tanha.woff);
+    }
