@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { FormsModule,ReactiveFormsModule,} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,6 +15,7 @@ import{MatSelectModule} from '@angular/material/select';
 import { FormComponent } from './form/form.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
+
 
 // import { FormControl } from '@angular/forms';
 // matDatepickerToggle
@@ -29,6 +30,9 @@ import {MatTableModule} from '@angular/material/table';
     FormComponent
     
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,10 +46,12 @@ import {MatTableModule} from '@angular/material/table';
     MatNativeDateModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatGridListModule,MatTableModule
+    MatGridListModule,MatTableModule,
     
   ],
+ 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+ 
 })
 export class AppModule { }

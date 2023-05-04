@@ -1,4 +1,4 @@
-import { Component,OnInit, Input } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 
 import {FormControl, Validators} from '@angular/forms';
 @Component({
@@ -19,4 +19,5 @@ export class FormComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 }
+
 
