@@ -2,8 +2,8 @@
 
 
 .container{
-    width: 350px;
-    height: 600px;
+    width: 800px;
+    height:400px;
     background-color: rgb(139, 210, 238,1.5) ;
     // opacity: ;
     border: 2px solid darkblue;
@@ -129,3 +129,8 @@ src: url(/assets/font/Tanha.woff);
 //   font-family: "Tanha";
 //   src: url(./assets/font/Tanha.woff) format("woff");
 // }
+.input{
+  height: 50px;
+  border-radius: 50px;
+
+}

@@ -27,7 +27,7 @@ export class AppComponent {
     'birthday',
     'email',
     'state',
-    'city',
+    'city'
   ];
 
   data: any[] = [];
