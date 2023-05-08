@@ -3,6 +3,7 @@ import { Component,Inject} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
+
 // export interface DialogData {
 //   animal: string;
 //   name: string;
@@ -13,6 +14,10 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
   styleUrls: ['./form.page.scss']
 })
 export class Formpage {
+
+
+
+  ///////////////////////////////
   state:any[]=[
   {id:"1",  name:"تهران" },
   {id:"2",  name:"اصفهان" },
@@ -96,16 +101,16 @@ selectCity:any[]=[];
     this.dialogRef.close()
 
   }
-   handleChangeCitySelectBox(e:any){
-        
-        this.item.cityId=e.id;
-        this.item.cityName=e.name;
-      } 
-     handleChangeStateSelectBox(v:any){
-        
-          this.item.stateId=v.id;
-          this.item.stateName=v.name;
-        } 
+  handleChangeCitySelectBox(e:any){
+     
+     this.item.cityId=e.id;
+     this.item.cityName=e.name;
+     } 
+    handleChangeStateSelectBox(v:any){
+     
+       this.item.stateId=v.id;
+       this.item.stateName=v.name;
+       } 
  
 }
 

@@ -17,8 +17,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
+
 // import { FormControl } from '@angular/forms';
 // matDatepickerToggle
+
+
 
 
 
@@ -27,7 +30,7 @@ import {MatRadioModule} from '@angular/material/radio';
   
   declarations: [
     AppComponent,
-    Formpage
+    Formpage,
     
     
   ],
@@ -45,7 +48,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatNativeDateModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatGridListModule,MatTableModule,MatDialogModule,MatRadioModule
+    MatGridListModule,MatTableModule,MatDialogModule,MatRadioModule,
     
     
   ],

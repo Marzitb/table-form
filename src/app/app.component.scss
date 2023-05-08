@@ -21,7 +21,14 @@ table {
      font-size: "20px";
      font-weight: bold;
   }
+  // .table{
+  //   background-color: line;
+  // }
   @font-face{
     font-family: "Tanha";
     src: url(/assets/font/Tanha.woff);
+    }
+    .containerInput{
+      margin-right: 50px;
+      display: flexbox;
     }

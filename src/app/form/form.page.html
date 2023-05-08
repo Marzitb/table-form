@@ -1,131 +1,185 @@
-<div class="container" dir="rtl">
+<div class="main">
   <div class="sabt">
-    <p>ثبت نام</p>
     <img class="img" src="/assets/img/user.png" alt="" />
+    <p class="pragraf">ثبت نام</p>
+    <p class="pragraf">خوش آمدید</p>
+    <p
+      class="pragraf"
+      style="font-size: 10px; font-weight: bold; padding: 10px"
+    >
+      لطفا برای ثبت نام فرم روبه رو را کامل فرمایید
+    </p>
   </div>
-
-  <div class="example-form">
-    <label for="" class="labell">نام</label>
-    <mat-form-field class="example-full-width textfield">
-      <mat-label>نام </mat-label>
-      <input matInput placeholder="" [(ngModel)]="item.name" />
-    </mat-form-field>
-    <!-- <label for="" class="labell">نام خانوادگی:</label>
+  <div class="container" dir="rtl">
+    <div class="example-form">
+      <div class="containerInput" style="margin-top: 15px">
+        <label for="" class="labell" style="padding: 30px"> نام</label>
+        <!-- <mat-form-field class="example-full-width textfield"> -->
+        <!-- <mat-label>نام </mat-label> -->
+        <input class="input" placeholder=" نام و نام خانوادگی" [(ngModel)]="item.name" />
+      </div>
+      <!-- </mat-form-field> -->
+      <!-- <label for="" class="labell">نام خانوادگی:</label>
       <mat-form-field class="example-full-width textfield ">
        
         <mat-label>نام خانوادگی</mat-label>
-        <input matInput placeholder="" >
+        <input  placeholder="" >
         
       </mat-form-field> -->
-    <label for="" class="labell">نام کاربری</label>
-    <mat-form-field class="example-full-width textfield">
-      <mat-label>نام کاربری</mat-label>
+      <div class="containerInput" style="margin-top: 10px; margin-right: 25px">
+        <label for="" class="labell">نام کاربری</label>
+        <!-- <mat-form-field class="example-full-width textfield"> -->
 
-      <input matInput placeholder="" [(ngModel)]="item.username" />
-    </mat-form-field>
-    <label for="" class="labell">جنسیت</label>
-    <!-- <mat-form-field class="example-full-width textfield"> -->
-    <mat-radio-group aria-label="جنسیت" [(ngModel)]="item.gender">
-      <mat-radio-button value="زن">زن</mat-radio-button>
-      <mat-radio-button value="مرد">مرد</mat-radio-button>
-    </mat-radio-group>
+        <input
+          class="input"
+          placeholder="نام کاربری"
+          [(ngModel)]="item.username"
+        />
+      </div>
+      <!-- </mat-form-field> -->
+      <div class="containerInput" style="margin-top: 5px; margin-right: -16px">
+        <label for="" class="labell">جنسیت</label>
+        <!-- <mat-form-field class="example-full-width textfield"> -->
+        <mat-radio-group aria-label="جنسیت" [(ngModel)]="item.gender">
+          <mat-radio-button
+            value="زن"
+            [checked]="item.gender"
+            style="font-weight: bold"
+            >زن</mat-radio-button
+          >
+          <mat-radio-button value="مرد" style="font-weight: bold"
+            >مرد</mat-radio-button
+          >
+        </mat-radio-group>
+      </div>
 
-    <!-- <mat-select >
+      <!-- <mat-select >
         <mat-option value="women">زن</mat-option>
         <mat-option value="men">مرد</mat-option>
       </mat-select> -->
-    <!-- </mat-form-field> -->
-    <label for="" class="labell">کلمه عبور</label>
-    <mat-form-field
-      appearance="fill"
-      width="100%"
-      class="example-full-width textfield"
-    >
-      <mat-label>کلمه عبور</mat-label>
-      <input
-        matInput
-        [type]="hide ? 'password' : 'text'"
-        [(ngModel)]="item.password"
-      />
-      <button
-        mat-icon-button
-        matSuffix
-        (click)="hide = !hide"
-        [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide"
-      >
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-    </mat-form-field>
+      <!-- </mat-form-field> -->
+      <div class="containerInput" style="margin-top: -15px; margin-right: 78px">
+        <label for="" class="labell">کلمه عبور</label>
+        <!-- <mat-form-field      appearance="fill"      width="100%"      class="example-full-width textfield" > -->
 
-    <label for="" class="labell">تاریخ تولد</label>
-    <mat-form-field appearance="fill" class="example-full-width textfield">
-      <mat-label>MM/DD/YYYY</mat-label>
-      <input
-        matInput
-        [matDatepicker]="picker"
-        [(ngModel)]="item.birthday"
-      />
+        <input
+          class="input"
+          placeholder="رمز عبور"
+          [type]="hide ? 'password' : 'text'"
+          [(ngModel)]="item.password"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </div>
+      <!-- </mat-form-field> -->
+      <div class="containerInput" style="margin-top: -15px; margin-right: 78px">
+        <label for="" class="labell">تاریخ تولد</label>
+        <!-- <mat-form-field appearance="fill" class="example-full-width textfield"> -->
+        
+        <input
+          class="input"
+          placeholder="MM/DD/YYYY "
+          
+          [matDatepicker]="picker"
+          [(ngModel)]="item.birthday"
+        />
 
-      <mat-datepicker-toggle
-        matIconSuffix
-        [for]="picker"
-      ></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-    <label for="" class="labell">ایمیل</label>
-    <!-- <div class="example-container  example-full-width textfield "> -->
-    <mat-form-field appearance="fill" class="example-full-width textfield">
-      <mat-label>ایمیل خود را وارد کنید</mat-label>
-      <input
-        matInput
-        placeholder="pat@example.com"
-        [formControl]="email"
-        required
-        [(ngModel)]="item.email"
-      />
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
-    <!-- </div> -->
-    <div class="city">
-      <label for="" class="labell">استان</label>
-      <mat-form-field class="example-full-width textfield size">
-        <mat-label>استان</mat-label>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+      <!-- </mat-form-field> -->
+      <div class="containerInput" style="margin-right: 133px">
+        <label for="" class="labell" style="padding: 22px">ایمیل</label>
+        <!-- <div class="example-container  example-full-width textfield "> -->
+        <!-- <mat-form-field appearance="fill" class="example-full-width textfield"> -->
+
+        <input
+          class="input"
+          placeholder="pat@example.com"
+          [formControl]="email"
+          required
+          [(ngModel)]="item.email"
+        />
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <!-- </mat-form-field> -->
+        <!-- </div> -->
+      </div>
+      <div class="city containerInput" style="margin-right: -5px; width: 50%">
+        <label
+          for=""
+          class="labell"
+          style="padding-left: 22px; margin-right: 56px"
+          >استان</label
+        >
+        <!-- <mat-form-field class="example-full-width textfield size"> -->
+
         <mat-select
           [(ngModel)]="item.stateId"
+          placeholder="استان "
           (ngModelChange)="onStateChange($event)"
+          class="input"
+          style="width: 160px"
         >
           <mat-option
+            class="input"
             *ngFor="let st of state"
             [value]=" st.id "
             (onSelectionChange)=" handleChangeStateSelectBox(st)"
             >{{st.name}}</mat-option
           >
         </mat-select>
-      </mat-form-field>
-      <label for="" class="labell margin">شهرستان</label>
-      <mat-form-field class="example-full-width textfield size">
-        <mat-label>شهرستان</mat-label>
-        <mat-select [(ngModel)]="item.cityId">
+      </div>
+      <!-- </mat-form-field> -->
+      <div class="city containerInput" style="margin-right: -12px; width: 50%">
+        <label
+          for=""
+          class="labell margin"
+          style="padding-left: 4px; margin-right: 58px"
+          >شهرستان</label
+        >
+        <!-- <mat-form-field class="example-full-width textfield size"> -->
+
+        <mat-select
+          [(ngModel)]="item.cityId"
+          placeholder=" شهرستان"
+          class="input"
+          style="width: 160px"
+        >
           <mat-option
             *ngFor="let ct of selectCity"
             [value]="ct.id"
-            (onSelectionChange)=" handleChangeStateSelectBox(ct)"
+            (onSelectionChange)=" handleChangeCitySelectBox(ct)"
             >{{ct.name}}</mat-option
           >
         </mat-select>
-      </mat-form-field>
+      </div>
+      <!-- </mat-form-field> -->
+      <div mat-dialog-actions>
+        <button
+          mat-raised-button
+          color="primary"
+          class="btn"
+          (click)="cancel()"
+        >
+          انصراف
+        </button>
+        <button mat-raised-button color="primary" class="btn" (click)="save()">
+          ثبت نام
+        </button>
+      </div>
     </div>
     <!-- <section> -->
     <!-- <div class="example-button-row"> -->
-    <div mat-dialog-actions>
-      <button mat-raised-button color="primary" class="btn" (click)="cancel()">
-        انصراف
-      </button>
-      <button mat-raised-button color="primary" class="btn" (click)="save()">
-        ثبت نام
-      </button>
-    </div>
 
     <!-- <button mat-stroked-button color="primary">م</button> -->
     <!-- <button mat-raised-button disabled>Disabled</button> -->

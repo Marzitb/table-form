@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Formpage } from './form/form.page';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 // export interface PeriodicElement {
 //   name: string;
@@ -19,12 +20,11 @@ import { Formpage } from './form/form.page';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  
   displayedColumns: string[] = [
     'name',
     'username',
     'gender',
-    'password',
-    'birthday',
     'email',
     'state',
     'city'
