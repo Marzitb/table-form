@@ -60,10 +60,10 @@ export class Formpage {
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
-      return 'You must enter a value';
+      return 'ایمیل را با فرمت صحیح وارد کنید';
     }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    return this.email.hasError('email') ? 'ایمیل صحیح نمی باشد' : '';
   }
   constructor(
     public dialogRef: MatDialogRef<Formpage>,

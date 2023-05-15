@@ -17,6 +17,18 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
+import { HttpClientModule } from '@angular/common/http';
+import {FilterPipe } from './pipe/filter.pipe';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
+ // -> imported filter pipe
+
+ // -> imported filter pipe
+
+
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 // import { FormControl } from '@angular/forms';
 // matDatepickerToggle
@@ -31,6 +43,7 @@ import {MatRadioModule} from '@angular/material/radio';
   declarations: [
     AppComponent,
     Formpage,
+    FilterPipe
     
     
   ],
@@ -48,8 +61,12 @@ import {MatRadioModule} from '@angular/material/radio';
     MatNativeDateModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatGridListModule,MatTableModule,MatDialogModule,MatRadioModule,
-    
+    MatGridListModule,
+    MatTableModule,
+    MatDialogModule,MatRadioModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule
     
   ],
  

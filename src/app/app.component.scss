@@ -20,10 +20,50 @@ table {
      font-family: "Tanha";
      font-size: "20px";
      font-weight: bold;
+     background:linear-gradient(200deg,#b33057,#f7d7e0);
+     color: white;
+     text-shadow: 2px 1px 3px white;
+
   }
-  // .table{
-  //   background-color: line;
-  // }
+ 
+  tr.mat-mdc-header-row.mdc-data-table__header-row.cdk-header-row {
+   background-color:#b33057 ;
+   border-radius: 5px;
+   text-align: center;
+}
+th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell {
+  color: white;
+  text-align: center;
+  font-size: large;
+  text-shadow: 0px 5px 4px #f1bbbb;
+
+}
+tr.mat-mdc-row.mdc-data-table__row.cdk-row.ng-star-inserted {
+  background-color: #f7d7e0;
+  font-weight: bold;
+}
+td.mat-mdc-cell.mdc-data-table__cell.cdk-cell {
+  text-align: center;
+  border-bottom: 3px double;
+  border-bottom-color: #b33057;
+
+}
+
+
+.search{
+  width: 100%;
+  display:flex ;
+  // position: relative;
+  // right: 173px;
+  margin-bottom: 25px;
+  margin-right: 20%;
+
+}
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #b33057;
+}
+ 
+
   @font-face{
     font-family: "Tanha";
     src: url(/assets/font/Tanha.woff);

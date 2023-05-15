@@ -98,7 +98,7 @@
         <mat-datepicker #picker></mat-datepicker>
       </div>
       <!-- </mat-form-field> -->
-      <div class="containerInput" style="margin-right: 133px">
+      <div class="containerInput" style="margin-right: 7px">
         <label for="" class="labell" style="padding: 22px">ایمیل</label>
         <!-- <div class="example-container  example-full-width textfield "> -->
         <!-- <mat-form-field appearance="fill" class="example-full-width textfield"> -->
@@ -109,11 +109,13 @@
           [formControl]="email"
           required
           [(ngModel)]="item.email"
+          
         />
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
         <!-- </mat-form-field> -->
         <!-- </div> -->
       </div>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
       <div class="city containerInput" style="margin-right: -5px; width: 50%">
         <label
           for=""

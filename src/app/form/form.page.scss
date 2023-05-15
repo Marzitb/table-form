@@ -148,7 +148,12 @@
   padding: 0px;
 }
 
-
+mat-error#mat-mdc-error-0 {
+  color: var(--mdc-theme-error, #ff1100);
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: 2px 0px 4px white;
+}
 .mdc-line-ripple::before, .mdc-line-ripple::after{
   position: absolute;
   bottom: -5px;
