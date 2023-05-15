@@ -47,9 +47,16 @@ export class AppComponent {
   reload: boolean = true;
   searchText = '';
   pageSize: any = [5];
-  
   pageNumber: any;
-  
+  body: any = {
+    Code: "Products2",
+    Columns: [],
+    Filters: [
+    ],
+    Take: this.pageSize[0],
+    Skip: 0,
+    Params: [],
+  };
   // constructor(public dialog: MatDialog,
   constructor(private http: HttpClient) { }
 
@@ -100,16 +107,7 @@ export class AppComponent {
     this.getData();
   }
 
-  body: any = {
-    Code: "Products2",
-    Columns: [],
-    Filters: [
-
-    ],
-    Take: this.pageSize[0],
-    Skip: 0,
-    Params: [],
-  };
+ 
   title = 'testService';
 
 
