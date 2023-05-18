@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {FilterPipe } from './pipe/filter.pipe';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { DetailsComponent } from './details/details.component';
 
 
  // -> imported filter pipe
@@ -43,7 +44,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   declarations: [
     AppComponent,
     Formpage,
-    FilterPipe
+    FilterPipe,
+    DetailsComponent
     
     
   ],

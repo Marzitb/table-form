@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,Output,EventEmitter  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 // import { Formpage } from './form/form.page';
 // import { MatDatepicker } from '@angular/material/datepicker';
 import { HttpClient } from '@angular/common/http';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-
+import { DetailsComponent } from './details/details.component';
 
 // export interface PeriodicElement {
 //   name: string;
@@ -25,6 +25,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 
 export class AppComponent {
+  @Output() dataId = new EventEmitter<any>();
   // ngOnInit() {          
   //   this.http.post<any>('https://reqres.in/api/posts').subscribe(data => {
   //       this.postId = data.id;
@@ -34,12 +35,14 @@ export class AppComponent {
 
   displayedColumns: string[] = [
     'companyName',
-    'imageCode',
+    'id',
     'title',
     'productTypeTitle',
     'sellPrice',
-    'sellerRate'
+    'sellerRate',
+    'detailEmployee'
   ];
+  
   isloading = false;
   Count = 0;
   dataSource: any;
@@ -58,7 +61,7 @@ export class AppComponent {
     Params: [],
   };
   // constructor(public dialog: MatDialog,
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,public dialog: MatDialog) { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator
 
@@ -74,16 +77,16 @@ export class AppComponent {
   getData() {
     // true
     this.isloading = true;
-    debugger
+    // debugger
     if (this.paginator && this.body.Skip == 0) {
-      debugger
+      // debugger
       this.paginator.pageIndex = 0;
 
     }
     this.http.post<any>('https://webapi.elesim.ir/DynamicForm/DataPublicQuery', this.body).subscribe(res => {
       this.isloading = false;
       // false
-      debugger
+      // debugger
       this.data = res.result.items;
       this.Count = res.result.totalCount;
       console.log(typeof this.Count)
@@ -109,6 +112,13 @@ export class AppComponent {
 
  
   title = 'testService';
+// detail(){
+//   this.body.Filters.push({
+//     FIELDNAME: "Id",
+//     OPERATOR: "Equal",
+//     VALUE: this.dataId
+//   })
+// }
 
 
   filterSearch() {
@@ -133,8 +143,7 @@ export class AppComponent {
 
 
   pageChange(e: any) {
-    debugger
-
+    // debugger
     this.body.Take = e.pageSize;
 
     this.body.Skip = e.pageIndex * e.pageSize;
@@ -144,8 +153,16 @@ export class AppComponent {
 
   }
 
-
-
+  detailResult(e:any,ele:any){
+    debugger
+    const dialogRef = this.dialog.open(DetailsComponent);
+  
+    
+  this.dataId.emit(ele.id);
+  
+    // this.detail()
+  }
+  // this.dialog._overlayContainer._containerElement.style.overflowY = "hidden";
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(Formpage);
 

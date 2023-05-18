@@ -34,7 +34,7 @@ table {
 th.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell {
   color: white;
   text-align: center;
-  font-size: large;
+  font-size: 15px;
   text-shadow: 0px 5px 4px #f1bbbb;
 
 }
@@ -62,7 +62,6 @@ td.mat-mdc-cell.mdc-data-table__cell.cdk-cell {
 .mat-mdc-progress-spinner {
   --mdc-circular-progress-active-indicator-color: #b33057;
 }
- 
 
   @font-face{
     font-family: "Tanha";

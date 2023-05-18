@@ -1,5 +1,4 @@
  <!-- *ngIf="reload" -->
-
 <div class="container" dir="rtl" style="display: flex; justify-content: center; flex-wrap: wrap; align-items: center;" *ngIf="reload">
  
   <!-- <div class="example-button-row">
@@ -16,7 +15,7 @@
   <!-- id="search-text" aria-describedby="search-text" 
         [(ngModel)]="searchText" placeholder="Enter text to search" 
         autofocus> -->
-  <button  (click)="filterSearch()"> جست وجو</button>
+  <button  (click)="filterSearch()" mat-raised-button  style="font-family: Tanha;   background-color: #b33057; color: white;"> جست وجو</button>
  </div>
   <table 
    class="mat-table" mat-table
@@ -37,9 +36,9 @@
       <!-- </tr> -->
     </ng-container>
 
-    <ng-container matColumnDef="imageCode">
-      <th mat-header-cell *matHeaderCellDef>کد تصویر</th>
-      <td mat-cell *matCellDef="let element">{{ element.imageCode }}</td>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>کد شناسه</th>
+      <td mat-cell *matCellDef="let element" >{{ element.id}}</td>
     </ng-container>
 
     <ng-container matColumnDef="title">
@@ -74,6 +73,15 @@
     <ng-container matColumnDef="sellerRate">
       <th mat-header-cell *matHeaderCellDef>نوع فروشنده</th>
       <td mat-cell *matCellDef="let element">{{ element.sellerRate }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="detailEmployee">
+      <th mat-header-cell *matHeaderCellDef> جزئیات </th>
+      <td mat-cell *matCellDef="let element">
+         <button mat-icon-button (click)="detailResult($event,element)" >
+          <mat-icon  fontIcon="wysiwyg" style="color: #b33057;">detail</mat-icon>
+        </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

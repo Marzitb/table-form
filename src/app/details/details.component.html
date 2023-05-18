@@ -1,0 +1,154 @@
+<div class="main">
+<div class="container" dir="rtl" style="font-size: 10px;" >
+    <p style="font-size: 12px; font-weight: bold; padding-right: 7px;">
+      اطلاعات بیشتر محصولات
+    </p>
+    <ul  >
+      <ol  class="ng-star-inserted">
+        <li   class="titr">
+          <p >نام شرکت</p>
+        </li>
+        <li  class="titr2">
+          <p  dir="rtl" class="ng-star-inserted"  *ngFor="let item of data">
+            {{item.companyName}}
+          </p>
+          
+        </li>
+      </ol>
+      <ol  class="ng-star-inserted">
+        <li class="titr">
+          <p >کد شناسه</p>
+        </li>
+        <li class="titr2">
+          <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+           {{item.id}}
+          </p>
+          
+        </li>
+      </ol>
+      
+      <ol  class="ng-star-inserted">
+        <li class="titr">
+            <p >شناسه محصول</p>
+          </li>
+          <li class="titr2">
+            <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+              {{item.productTypeId}}
+            </p>
+            
+          </li>
+        </ol>
+        <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >عنوان نوع محصول</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.productTypeTitle}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >تخفیف فروش</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+               {{item.sellDiscount}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >قیمت فروش</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+               {{item.sellPrice}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >شناسه فروشنده</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.sellerId}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >نرخ فروشنده</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.sellerRate}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >نوع فروشنده</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.sellerType}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >رتبه سیم کارت</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.simRank}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >موجودی</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.stock}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >عنوان</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.title}}
+              </p>
+              
+            </li>
+          </ol>
+          <ol  class="ng-star-inserted">
+            <li class="titr">
+              <p >جهت عنوان</p>
+            </li>
+            <li class="titr2">
+              <p  dir="rtl" class="ng-star-inserted" *ngFor="let item of data">
+                {{item.titleDirection}}
+              </p>
+              
+            </li>
+          </ol>
+    </ul>
+  
+  </div>
+</div>
